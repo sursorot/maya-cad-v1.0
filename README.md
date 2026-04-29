@@ -1,4 +1,4 @@
-![Maya CAD v1.0 header](docs/screenshots/Maya_Header.png)
+![Maya CAD v1.0 animated demo](docs/screenshots/maya-cad-demo.gif)
 
 # 🏗️ Maya CAD v1.0
 
