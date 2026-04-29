@@ -6,6 +6,10 @@ Maya CAD v1.0 is a browser-based CAD and floor plan design workspace for drawing
 
 The app is designed to run as a static web application, so it can be hosted on Vercel without a required backend or sign-in flow.
 
+## 📚 Documentation
+
+- [Full Maya CAD User Guide](docs/USER_GUIDE.md) covers setup, workspace layout, drawing tools, architectural workflows, snapping, measurements, exports, projects, shortcuts, performance behavior, and troubleshooting.
+
 ## 📸 App Screenshots
 
 ### 🖼️ Main CAD Workspace
