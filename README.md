@@ -1,4 +1,4 @@
-# Geometry OS
+# Geometry OS [Project Maya]
 
 Geometry OS is a web-based CAD and floor plan design workspace built with React, TypeScript, Vite, and Konva. It focuses on fast canvas-based drawing, precise geometry editing, and a deployable browser experience.
 
