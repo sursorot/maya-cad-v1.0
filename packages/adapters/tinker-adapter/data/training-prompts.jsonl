@@ -1,0 +1,238 @@
+{
+  "id": "example-room-1",
+  "prompt": "Create a 4m by 3m room with a door on the south wall",
+  "difficulty": "level-1",
+  "targetSnapshot": {
+    "contract_version": "1.0.0",
+    "activeTool": "select",
+    "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+    "shapes": [
+      {
+        "id": "room-1",
+        "type": "room",
+        "points": [
+          { "x": 0, "y": 0 },
+          { "x": 4, "y": 0 },
+          { "x": 4, "y": 3 },
+          { "x": 0, "y": 3 }
+        ],
+        "label": "Bedroom"
+      },
+      {
+        "id": "opening-1",
+        "type": "opening",
+        "category": "door",
+        "center": { "x": 2, "y": 0 },
+        "width": 0.9,
+        "height": 2.1
+      }
+    ],
+    "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+  },
+  "constraints": {
+    "dimensions": { "width": 4, "height": 3 },
+    "roomCount": 1,
+    "features": ["door"]
+  },
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "contract": {
+    "tdc_version": "1.0.0",
+    "workspace_contract_version": "1.0.0",
+    "reward_version": "1.0",
+    "bridge_version": "1.0",
+    "session_id": "example-room-1",
+    "prompt_thread": [
+      { "turn_id": "prompt-0", "speaker": "user", "text": "Create a 4m by 3m room", "timestamp": 0 },
+      { "turn_id": "prompt-1", "speaker": "user", "text": "Add a door on the south wall", "timestamp": 5000 }
+    ],
+    "initial_snapshot": {
+      "contract_version": "1.0.0",
+      "activeTool": "select",
+      "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+      "shapes": [],
+      "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+    },
+    "turns": [
+      {
+        "turn_id": "example-room-1-cmd-0",
+        "speaker": "agent",
+        "timestamp": 6000,
+        "command": {
+          "type": "workspace/wall_rectangle",
+          "start": { "x": 0, "y": 0 },
+          "end": { "x": 4, "y": 3 },
+          "options": { "thickness": 0.1524, "height": 3.0 }
+        },
+        "action_index": 1,
+        "result_snapshot": {
+          "contract_version": "1.0.0",
+          "activeTool": "select",
+          "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+          "shapes": [
+            {
+              "id": "room-1",
+              "type": "room",
+              "points": [
+                { "x": 0, "y": 0 },
+                { "x": 4, "y": 0 },
+                { "x": 4, "y": 3 },
+                { "x": 0, "y": 3 }
+              ],
+              "label": "Bedroom"
+            }
+          ],
+          "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+        },
+        "reward": null
+      }
+    ],
+    "final_snapshot": {
+      "contract_version": "1.0.0",
+      "activeTool": "select",
+      "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+      "shapes": [
+        {
+          "id": "room-1",
+          "type": "room",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 4, "y": 0 },
+            { "x": 4, "y": 3 },
+            { "x": 0, "y": 3 }
+          ],
+          "label": "Bedroom"
+        },
+        {
+          "id": "opening-1",
+          "type": "opening",
+          "category": "door",
+          "center": { "x": 2, "y": 0 },
+          "width": 0.9,
+          "height": 2.1
+        }
+      ],
+      "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+    },
+    "constraints": {
+      "dimensions": { "width": 4, "height": 3 },
+      "roomCount": 1,
+      "features": ["door"]
+    },
+    "difficulty": "level-1",
+    "annotations": [],
+    "signing": {
+      "hash": "sha256-demo-room",
+      "created_by": "human",
+      "tool_version": "sample/0.1.0"
+    }
+  }
+}
+{
+  "id": "example-circle-1",
+  "prompt": "Draw a circle with radius 1.5m at the center",
+  "difficulty": "level-1",
+  "targetSnapshot": {
+    "contract_version": "1.0.0",
+    "activeTool": "select",
+    "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+    "shapes": [
+      {
+        "id": "circle-1",
+        "type": "circle",
+        "center": { "x": 10, "y": 10 },
+        "radius": 1.5
+      }
+    ],
+    "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+  },
+  "constraints": {
+    "features": ["circle"]
+  },
+  "createdAt": "2025-01-02T00:00:00.000Z",
+  "contract": {
+    "tdc_version": "1.0.0",
+    "workspace_contract_version": "1.0.0",
+    "reward_version": "1.0",
+    "bridge_version": "1.0",
+    "session_id": "example-circle-1",
+    "prompt_thread": [
+      { "turn_id": "prompt-0", "speaker": "user", "text": "Draw a circle", "timestamp": 0 }
+    ],
+    "initial_snapshot": {
+      "contract_version": "1.0.0",
+      "activeTool": "select",
+      "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+      "shapes": [],
+      "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+    },
+    "turns": [
+      {
+        "turn_id": "example-circle-1-cmd-0",
+        "speaker": "agent",
+        "timestamp": 2000,
+        "command": {
+          "type": "workspace/select_tool",
+          "tool": "circle"
+        },
+        "action_index": 37,
+        "result_snapshot": {
+          "contract_version": "1.0.0",
+          "activeTool": "circle",
+          "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+          "shapes": [],
+          "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+        },
+        "reward": null
+      },
+      {
+        "turn_id": "example-circle-1-cmd-1",
+        "speaker": "agent",
+        "timestamp": 4000,
+        "command": {
+          "type": "workspace/click",
+          "point": { "x": 10, "y": 10 }
+        },
+        "action_index": 20,
+        "result_snapshot": {
+          "contract_version": "1.0.0",
+          "activeTool": "circle",
+          "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+          "shapes": [
+            {
+              "id": "circle-1",
+              "type": "circle",
+              "center": { "x": 10, "y": 10 },
+              "radius": 1.5
+            }
+          ],
+          "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+        },
+        "reward": null
+      }
+    ],
+    "final_snapshot": {
+      "contract_version": "1.0.0",
+      "activeTool": "select",
+      "viewBox": { "x": 0, "y": 0, "width": 20, "height": 20 },
+      "shapes": [
+        {
+          "id": "circle-1",
+          "type": "circle",
+          "center": { "x": 10, "y": 10 },
+          "radius": 1.5
+        }
+      ],
+      "metadata": { "createdAt": 0, "updatedAt": 0, "historyDepth": 0, "futureDepth": 0 }
+    },
+    "constraints": {
+      "features": ["circle"]
+    },
+    "difficulty": "level-1",
+    "annotations": [],
+    "signing": {
+      "hash": "sha256-demo-circle",
+      "created_by": "human",
+      "tool_version": "sample/0.1.0"
+    }
+  }
+}

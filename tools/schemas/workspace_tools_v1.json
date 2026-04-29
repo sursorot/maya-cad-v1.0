@@ -1,0 +1,28 @@
+{
+  "$id": "https://maya.build/contracts/workspace_tools_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maya Workspace Tools v1",
+  "type": "string",
+  "enum": [
+    "select",
+    "wall",
+    "wall-rectangle",
+    "opening",
+    "rectangle",
+    "circle",
+    "line",
+    "polyline",
+    "curve",
+    "arc",
+    "pencil",
+    "guideline",
+    "dimension-linear",
+    "dimension-arc",
+    "dimension-span",
+    "dimension-angle",
+    "room",
+    "zone",
+    "text"
+  ]
+}
+

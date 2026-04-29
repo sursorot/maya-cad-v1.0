@@ -1,0 +1,32 @@
+{
+  "$id": "https://maya.build/contracts/commands/create_wall_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workspace/create_wall v1 payload",
+  "type": "object",
+  "required": ["type", "start", "end"],
+  "properties": {
+    "type": {
+      "const": "workspace/create_wall"
+    },
+    "start": {
+      "$ref": "https://maya.build/contracts/workspace_shapes_v1#/$defs/point"
+    },
+    "end": {
+      "$ref": "https://maya.build/contracts/workspace_shapes_v1#/$defs/point"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "thickness": { "type": "number", "minimum": 0.01 },
+        "height": { "type": "number", "minimum": 0.1 },
+        "alignment": {
+          "type": "string",
+          "enum": ["center", "inside", "outside"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+

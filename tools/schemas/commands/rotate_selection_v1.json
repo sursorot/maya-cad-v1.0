@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "workspace/rotate_selection v1 payload",
+  "type": "object",
+  "properties": {
+    "type": { "const": "workspace/rotate_selection" },
+    "angle": { "type": "number" },
+    "pivot": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["type", "angle"],
+  "additionalProperties": false
+}
+

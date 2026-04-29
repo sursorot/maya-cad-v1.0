@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/__init__.py
+tinker_workspace_adapter.egg-info/PKG-INFO
+tinker_workspace_adapter.egg-info/SOURCES.txt
+tinker_workspace_adapter.egg-info/dependency_links.txt
+tinker_workspace_adapter.egg-info/requires.txt
+tinker_workspace_adapter.egg-info/top_level.txt

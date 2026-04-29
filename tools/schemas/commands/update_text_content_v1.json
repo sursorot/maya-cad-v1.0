@@ -1,0 +1,25 @@
+{
+  "$id": "https://maya.build/contracts/commands/update_text_content_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workspace/update_text_content v1 payload",
+  "type": "object",
+  "required": ["type", "shapeId", "content"],
+  "properties": {
+    "type": { "const": "workspace/update_text_content" },
+    "shapeId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "alignment": {
+      "type": "string",
+      "enum": ["left", "center", "right"]
+    }
+  },
+  "additionalProperties": false
+}
+

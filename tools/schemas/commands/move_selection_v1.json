@@ -1,0 +1,21 @@
+{
+  "$id": "https://maya.build/contracts/commands/move_selection_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workspace/move_selection v1 payload",
+  "type": "object",
+  "required": ["type", "delta"],
+  "properties": {
+    "type": { "const": "workspace/move_selection" },
+    "delta": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      }
+    },
+    "snap": { "type": "boolean", "default": true }
+  },
+  "additionalProperties": false
+}
+

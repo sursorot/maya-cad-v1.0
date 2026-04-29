@@ -1,0 +1,23 @@
+{
+  "$id": "https://maya.build/contracts/privacy_annotation_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Training Data Privacy Annotations v1",
+  "type": "object",
+  "required": ["type", "note", "timestamp"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["privacy", "qa", "review"]
+    },
+    "author": { "type": "string" },
+    "note": { "type": "string" },
+    "timestamp": { "type": "integer", "minimum": 0 },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warn", "critical"],
+      "default": "info"
+    }
+  },
+  "additionalProperties": false
+}
+

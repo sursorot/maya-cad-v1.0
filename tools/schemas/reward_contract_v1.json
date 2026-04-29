@@ -1,0 +1,96 @@
+{
+  "$id": "https://maya.build/contracts/reward_contract_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maya Reward Contract v1",
+  "type": "object",
+  "required": ["reward_version", "components", "totalBounds"],
+  "properties": {
+    "reward_version": { "const": "1.0" },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "weight", "range", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "weight": { "type": "number" },
+          "range": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "formula": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "totalBounds": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "notes": { "type": "string" }
+  },
+  "examples": [
+    {
+      "reward_version": "1.0",
+      "components": [
+        {
+          "name": "shapeCount",
+          "weight": 0.2,
+          "range": [0, 1],
+          "formula": "compareShapeCounts(generated, target)",
+          "description": "Match total number of shapes"
+        },
+        {
+          "name": "shapeTypes",
+          "weight": 0.3,
+          "range": [0, 1],
+          "formula": "compareShapeTypes(generated, target)",
+          "description": "Match distribution of shape types"
+        },
+        {
+          "name": "position",
+          "weight": 0.25,
+          "range": [0, 1],
+          "formula": "averagePositionSimilarity(generated, target)",
+          "description": "Spatial alignment score"
+        },
+        {
+          "name": "dimension",
+          "weight": 0.25,
+          "range": [0, 1],
+          "formula": "averageDimensionSimilarity(generated, target)",
+          "description": "Dimension similarity score"
+        },
+        {
+          "name": "constraints",
+          "weight": 1.0,
+          "range": [0, 1],
+          "formula": "checkConstraints(generated, target.constraints)",
+          "description": "Domain-specific constraints"
+        },
+        {
+          "name": "actionBonus",
+          "weight": 1.0,
+          "range": [0, 2],
+          "formula": "bonus(category, ΔshapeCount)",
+          "description": "Bonus for creative actions that add shapes"
+        },
+        {
+          "name": "actionPenalty",
+          "weight": 1.0,
+          "range": [0, 1],
+          "formula": "penalty(category, prevShapeCount)",
+          "description": "Penalties for wasteful actions"
+        }
+      ],
+      "totalBounds": [-2.0, 3.0],
+      "notes": "All formulas MUST be deterministic; weight changes require a MAJOR bump."
+    }
+  ]
+}
+

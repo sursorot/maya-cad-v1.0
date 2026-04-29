@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="-382 -402 764 804" height="100%" width="100%">
+  <defs>
+    <pattern patternUnits="userSpaceOnUse" height="1000" width="1000" viewBox="0,0,10,10" id="placeholder">
+      <polygon points="0,0 0,5 5,5 5,0" fill="grey"/>
+      <polygon points="5,5 5,10 10,10 10,5" fill="grey"/>
+    </pattern>
+  </defs>
+  
+  <!-- Bed frame outer - King: 76" x 80" scaled to ~380 x 400 units -->
+  <rect x="-380" y="-400" width="760" height="800" rx="8" ry="8" fill="rgba(0,0,0,0.04)" stroke-width="3.0" stroke="rgba(0,0,0,1.00)"/>
+  
+  <!-- Headboard (thick top section) -->
+  <rect x="-380" y="-400" width="760" height="60" rx="8" ry="8" fill="rgba(0,0,0,0.06)" stroke-width="3.0" stroke="rgba(0,0,0,1.00)"/>
+  <line x1="-380" y1="-340" x2="380" y2="-340" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  
+  <!-- Mattress outline -->
+  <rect x="-360" y="-320" width="720" height="680" rx="6" ry="6" fill="rgba(255,255,255,0.5)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  
+  <!-- Left pillow -->
+  <rect x="-340" y="-300" width="160" height="100" rx="20" ry="20" fill="rgba(255,255,255,0.8)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  <!-- Left pillow inner detail -->
+  <rect x="-320" y="-280" width="120" height="60" rx="12" ry="12" fill="none" stroke-width="1.5" stroke="rgba(188,188,188,1.00)"/>
+  
+  <!-- Right pillow -->
+  <rect x="180" y="-300" width="160" height="100" rx="20" ry="20" fill="rgba(255,255,255,0.8)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  <!-- Right pillow inner detail -->
+  <rect x="200" y="-280" width="120" height="60" rx="12" ry="12" fill="none" stroke-width="1.5" stroke="rgba(188,188,188,1.00)"/>
+  
+  <!-- Blanket/comforter fold line -->
+  <path d="M -360 -160 Q 0 -120 360 -160" fill="none" stroke-width="1.5" stroke="rgba(188,188,188,1.00)"/>
+  
+  <!-- Center mattress seam (king beds often have this) -->
+  <line x1="0" y1="-320" x2="0" y2="360" stroke-width="1.0" stroke="rgba(188,188,188,1.00)" stroke-dasharray="10,10"/>
+  
+  <!-- Footboard indication -->
+  <line x1="-360" y1="360" x2="360" y2="360" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  
+  <!-- Bed legs (corner indicators) -->
+  <circle cx="-365" cy="-385" r="12" fill="rgba(0,0,0,0.06)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  <circle cx="365" cy="-385" r="12" fill="rgba(0,0,0,0.06)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  <circle cx="-365" cy="385" r="12" fill="rgba(0,0,0,0.06)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+  <circle cx="365" cy="385" r="12" fill="rgba(0,0,0,0.06)" stroke-width="2.0" stroke="rgba(0,0,0,1.00)"/>
+</svg>
+

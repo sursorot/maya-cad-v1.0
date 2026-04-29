@@ -1,0 +1,30 @@
+{
+  "$id": "https://maya.build/contracts/commands/opening_insert_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workspace/opening_insert v1 payload",
+  "type": "object",
+  "required": ["type", "point", "options"],
+  "properties": {
+    "type": { "const": "workspace/opening_insert" },
+    "point": {
+      "$ref": "https://maya.build/contracts/workspace_shapes_v1#/$defs/point"
+    },
+    "options": {
+      "type": "object",
+      "required": ["category", "width", "height"],
+      "properties": {
+        "category": {
+          "enum": ["door", "window", "skylight", "vent", "custom"]
+        },
+        "subtype": { "type": "string" },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 },
+        "hinge": { "enum": ["left", "right", "center"] },
+        "swing": { "enum": ["in", "out", "both"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
+

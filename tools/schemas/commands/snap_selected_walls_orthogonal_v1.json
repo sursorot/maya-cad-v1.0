@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "workspace/snap_selected_walls_orthogonal v1 payload",
+  "type": "object",
+  "properties": {
+    "type": { "const": "workspace/snap_selected_walls_orthogonal" }
+  },
+  "required": ["type"],
+  "additionalProperties": false
+}
+

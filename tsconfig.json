@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@maya/workspace-domain/*": ["apps/maya-web/src/domain/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./apps/maya-web/tsconfig.app.json" },
+    { "path": "./apps/maya-web/tsconfig.node.json" },
+    { "path": "./packages/rl-core/tsconfig.json" }
+  ]
+}

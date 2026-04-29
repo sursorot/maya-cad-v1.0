@@ -1,0 +1,67 @@
+{
+  "$id": "https://maya.build/contracts/workspace_snapshot/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workspace Snapshot v1",
+  "type": "object",
+  "required": ["contract_version", "shapes", "viewBox", "metadata"],
+  "properties": {
+    "contract_version": { "const": "1.0.0" },
+    "viewBox": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number", "minimum": 0.1 },
+        "height": { "type": "number", "minimum": 0.1 }
+      }
+    },
+    "shapes": {
+      "type": "array",
+      "items": {
+        "$ref": "https://maya.build/contracts/workspace_shapes_v1"
+      }
+    },
+    "activeTool": {
+      "$ref": "https://maya.build/contracts/workspace_tools_v1"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["createdAt", "updatedAt", "historyDepth", "futureDepth"],
+      "properties": {
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "integer", "minimum": 0 },
+        "historyDepth": { "type": "integer", "minimum": 0 },
+        "futureDepth": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "selectedShapeId": { "type": "string", "format": "uuid" },
+    "selectedShapeIds": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" }
+    },
+    "isDrawing": { "type": "boolean" },
+    "currentShape": {
+      "$ref": "https://maya.build/contracts/workspace_shapes_v1"
+    },
+    "drawingMode": { "enum": ["one-time", "chain"] },
+    "guidelineOrientation": {
+      "enum": ["horizontal", "vertical", "freeform"]
+    },
+    "view": {
+      "type": "object",
+      "properties": {
+        "zoom": { "type": "number", "minimum": 0.1 },
+        "pan": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
+
